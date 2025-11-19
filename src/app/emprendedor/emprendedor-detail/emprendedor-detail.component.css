@@ -1,6 +1,8 @@
 .container-fluid {
   background-color: lightgreen;
+  text-align: center;
   color: white;
+  padding-top: 10px;
 }
 
 .volver-button {
@@ -9,8 +11,13 @@
   background-color: green;
   color: white;
   border-radius: 10px;
+  height: 2.5rem;
 }
 
 .emprendedor-info {
   min-width: 0; /* para que el texto haga wrap correctamente */
+}
+
+.row {
+  padding-top: 20px;
 }
