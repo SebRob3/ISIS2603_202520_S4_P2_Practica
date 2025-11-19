@@ -1,22 +1,29 @@
 <div class="container">
+  <div class="container-fluid title-container">
     <h1 class="mt-4">Jovenes Emprendedores Colombianos</h1>
+  </div>
 
-    <table class="table table-bordered mt-4">
-        <thead>
-            <tr style="--bs-table-bg: #0ae98a; --bs-table-color: white;">
-                <th scope="col">Nombre</th>
-                <th scope="col">Foto</th>
-                <th scope="col">Genero</th>
-                <th scope="col">Pregrado</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let emprendedor of emprendedores" (click)="seleccionarEmprendedor(emprendedor)">
-                <td>{{ emprendedor.nombre }}</td>
-                <td><img [src]="emprendedor.foto_url" alt="{{ emprendedor.nombre }}" style="width: 50px; height: auto;"></td>
-                <td>{{ emprendedor.genero }}</td>
-                <td>{{ emprendedor.pregrado }}</td>
-            </tr>
-        </tbody>
-    </table>
+  <div class="container-fluid cards-container">
+    <div class="row">
+      @for(e of emprendedores; track e ) {
+        <div class="col">
+          <div class="card" (click)="seleccionarEmprendedor(e)">
+            <img src="{{ e.foto_url }}" alt="{{ e.nombre }}" class="card-img-top emp-img" />
+            <div class="card-body">
+              <h5 class="card-title">{{ e.nombre }}</h5>
+              <p><strong>Género: </strong> {{e.genero}}</p>
+              <p><strong>Pregrado: </strong> {{e.pregrado}}</p>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+    <div class="row">
+      <div class="col-4">
+        <div class="total-emprendedores">
+          <p>Total de Emprendedores: {{ getTotalEmprendedores() }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

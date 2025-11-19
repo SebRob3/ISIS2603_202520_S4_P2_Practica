@@ -1,0 +1,16 @@
+.container-fluid {
+  background-color: lightgreen;
+  color: white;
+}
+
+.volver-button {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: green;
+  color: white;
+  border-radius: 10px;
+}
+
+.emprendedor-info {
+  min-width: 0; /* para que el texto haga wrap correctamente */
+}

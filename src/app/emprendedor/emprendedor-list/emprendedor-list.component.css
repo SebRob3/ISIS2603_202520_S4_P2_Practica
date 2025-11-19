@@ -1,0 +1,36 @@
+.card {
+  margin: 10px auto 20px;
+  max-width: 100%;
+  padding: 0.5rem;
+  border-color: lightgreen;
+  border-width: 0.1rem;
+}
+
+.card .card-body {
+  padding: 0.5rem 0.75rem;
+}
+
+.emp-img {
+  border-color:lightgreen;
+  object-fit: cover;
+}
+
+h5 {
+  padding-bottom: 10px;
+}
+
+.title-container {
+  border-radius: 5%;
+  background-color: lightgreen;
+  text-align: center;
+  min-height: 100px;
+  color: white;
+}
+
+.total-emprendedores {
+  border-radius: 5%;
+  background-color: green;
+  color: white;
+  min-height: 25px;
+  text-align: center;
+}

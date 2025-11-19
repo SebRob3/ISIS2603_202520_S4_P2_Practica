@@ -36,4 +36,8 @@ export class EmprendedorDetailComponent {
     })
   }
 
+  goBack(): void {
+    this.router.navigate(['/emprendedores'])
+  }
+
 }

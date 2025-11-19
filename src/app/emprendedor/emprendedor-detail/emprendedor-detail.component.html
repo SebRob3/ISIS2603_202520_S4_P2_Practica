@@ -1,17 +1,27 @@
 <div *ngIf="emprendedorDetail" style="margin-bottom: 2rem;">
-    <h3>{{emprendedorDetail.nombre}}</h3>
-    <div>
-        <div style="height: 300px; display: inline-block;">
-            <img [src]="emprendedorDetail.foto_url" alt="{{ emprendedorDetail.nombre }}" style="width: 80%; ">
-        </div>
-        
-        <div style="width: 50%; display: inline-block;">
-            <p><strong>Pregrado: </strong> {{emprendedorDetail.pregrado}} </p>
-            <p><strong>Genero: </strong> {{emprendedorDetail.genero}} </p>
-            <p><strong>Emprendimientos: </strong></p>
-            <ul>
-                <li *ngFor="let emprendimiento of emprendedorDetail.emprendimientos">{{ emprendimiento }}</li>
-            </ul>
-        </div>
+  <div class="row">
+    <div class="col-4">
+      <img [src]="emprendedorDetail.foto_url" alt="{{emprendedorDetail.nombre}}" class="emprendedor-img">
     </div>
+    <div class="col-8 emprendedor-info">
+      <div class="row title">
+        <div class="container-fluid">
+          <h1>{{emprendedorDetail.nombre}}</h1>
+        </div>
+      </div>
+      <div class="row">
+        <p><strong style="color: green;">Pregrado: </strong> {{emprendedorDetail.pregrado}}</p>
+        <p><strong style="color: green;">Género: </strong> {{emprendedorDetail.genero}}</p>
+        <div class="emprendimientos">
+          <h5 style="color: green;">Emprendimientos: </h5>
+          <ul>
+            @for (em of emprendedorDetail.emprendimientos; track em) {
+              <li>{{em}}</li>
+            }
+          </ul>
+        </div>
+      </div>
+      <button class="volver-button" (click) = "goBack()">Volver al listado</button>
+    </div>
+  </div>
 </div>

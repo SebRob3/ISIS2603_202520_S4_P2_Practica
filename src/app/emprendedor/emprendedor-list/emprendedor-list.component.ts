@@ -34,4 +34,8 @@ export class EmprendedorListComponent implements OnInit {
     });
     return this.emprendedores;
   }
+
+  getTotalEmprendedores(): number {
+    return this.emprendedores.length;
+  }
 }
