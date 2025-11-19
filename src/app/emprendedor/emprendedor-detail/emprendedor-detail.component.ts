@@ -28,8 +28,11 @@ export class EmprendedorDetailComponent {
   }
 
   getEmprendedor(id: number): void {
-    this.emprendedorService.getEmprendedor(id).subscribe(nuevoEmpr => {
+    console.log("Buscando emprendedor")
+    this.emprendedorService.getEmprendedorDetail(id).subscribe(nuevoEmpr => {
+      console.log(nuevoEmpr)
       this.emprendedor = nuevoEmpr
+      this.emprendedorDetail = nuevoEmpr
     })
   }
 

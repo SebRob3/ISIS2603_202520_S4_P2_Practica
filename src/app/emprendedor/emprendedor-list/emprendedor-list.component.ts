@@ -28,6 +28,7 @@ export class EmprendedorListComponent implements OnInit {
   }
 
   getEmprendedoresList(): Array<Emprendedor> {
+    console.log("Intentando acceder")
     this.emprendedorService.getEmprendedores().subscribe((data) => {
       this.emprendedores = data;
     });
